@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>State Language Selector</title>
+</h:head>
+
+<h:body>
+    <h:form>
+    <span style="display: flex; align-items: center;">
+        <span style="margin-right: 10px;">Select Your State:</span>
+        <h:selectOneMenu value="#{stateBean.state}" valueChangeListener="#{stateBean.stateChanged}" onchange="submit()">
+            <f:selectItem itemValue="Karnataka" itemLabel="Karnataka"/>
+            <f:selectItem itemValue="Maharashtra" itemLabel="Maharashtra"/>
+            <f:selectItem itemValue="Tamil Nadu" itemLabel="Tamil Nadu"/>
+            <f:selectItem itemValue="West Bengal" itemLabel="West Bengal"/>
+        </h:selectOneMenu>
+    </span>
+    <h:outputText value="Your language is: #{stateBean.language}"/>
+	</h:form>
+</h:body>
+</html>
